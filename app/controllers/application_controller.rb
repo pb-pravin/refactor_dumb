@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
   before_filter :projects_list
 
   def projects_list
-    @projects = Projects.where(active: true)
+    @projects = Projects.active
   end
 end
