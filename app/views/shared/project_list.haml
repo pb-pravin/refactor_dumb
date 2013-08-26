@@ -1,0 +1,3 @@
+%ul
+  - Project.where(active: true).each do |project|
+    %li.project= link_to project_path(project), project.name

@@ -2,6 +2,4 @@
 %p Find me in app/views/pages/welcome.html.haml
 
 %h2 Here's a list of active projects:
-%ul
-  - Project.where(active: true).each do |project|
-    %li.project= link_to project_path(project), project.name
+= render :partial => 'shared/project_list'
